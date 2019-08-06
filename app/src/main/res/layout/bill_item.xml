@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        style="@style/font_bill_title"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bill_no"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <TextView
+                        android:id="@+id/bill_no"
+                        style="@style/font_bill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SC20190425000001"
+                        android:textColor="@color/colorPrimary"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/font_bill_title"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bill_date"
+                            android:textColor="@color/colorBlack1" />
+
+                        <TextView
+                            android:id="@+id/bill_date"
+                            style="@style/font_bill"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="04/15/2019"
+                            android:textColor="@color/colorBlack1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp">
+
+                        <TextView
+                            style="@style/font_bill_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bill_status"
+                            android:textColor="@color/colorBlack1" />
+
+                        <TextView
+                            style="@style/font_bill"
+                            android:id="@+id/bill_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:text="Local"
+                            android:textColor="@color/colorBlack1"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center_horizontal"
+                    android:adjustViewBounds="true"
+                    android:background="@color/colorTransparent"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_right_forward"
+                    android:tint="@color/colorPrimary" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite1" />
+
+</LinearLayout>

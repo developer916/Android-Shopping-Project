@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:paddingBottom="12dp">
+
+        <TextView
+            style="@style/font_bill_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/goods_name"/>
+
+        <TextView
+            style="@style/font_bill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/modal_good_name"
+            android:text="COCA"
+            android:layout_marginLeft="3dp"
+            android:textColor="@color/colorBlack1"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:paddingBottom="12dp">
+
+        <TextView
+            style="@style/font_bill_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/goods_code"/>
+
+        <TextView
+            style="@style/font_bill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/modal_good_code"
+            android:text="COCA"
+            android:layout_marginLeft="3dp"
+            android:textColor="@color/colorBlack1"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/font_bill_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/item_quantity"
+            android:paddingBottom="12dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/input_box"
+        android:orientation="vertical">
+
+        <EditText
+            style="@style/font_subtitle_2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/modal_quantity"
+            android:inputType="number"
+            android:digits="1234567890"
+            android:hint="@string/item_quantity"
+            android:background="@color/colorTransparent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/modal_cancel"
+            style="@style/font_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/logout_cancel"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/modal_modify"
+            style="@style/font_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/modify"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/colorWhite"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <TextView
+                android:id="@+id/app_bar_title"
+                style="@style/font_subtitle_1"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"
+                android:text="@string/bill_detail_app_title"
+                android:textColor="@color/colorPrimary" />
+
+
+            <ImageButton
+                android:id="@+id/upload_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:adjustViewBounds="true"
+                android:background="@color/colorTransparent"
+                android:scaleType="center"
+                android:src="@drawable/ic_upload"
+                android:tint="@color/colorPrimary"/>
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorWhite2"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="40dp">
+
+                <EditText
+                    style="@style/font_body_2"
+                    android:id="@+id/search_good"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="@color/colorTransparent"
+                    android:hint="@string/search_goods"
+                    android:drawableStart="@drawable/ic_search"
+                    android:drawableLeft="@drawable/ic_search"
+                    android:drawablePadding="16dp"
+                    android:inputType="text"
+                    android:paddingLeft="16dp"
+                    android:drawableTint="?android:textColorHint"
+                    android:textColorHint="@color/colorBlack1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="16dp"
+                android:background="@drawable/border_bottom">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        style="@style/font_bill_title"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bill_no"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <TextView
+                        style="@style/font_bill"
+                        android:id="@+id/bill_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SC2019042500001"
+                        android:textColor="@color/colorPrimary"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            style="@style/font_bill_title"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bill_date"
+                            android:textColor="@color/colorPrimary"/>
+
+                        <TextView
+                            style="@style/font_bill"
+                            android:id="@+id/bill_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="04/15/2019"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="40dp">
+
+                        <TextView
+                            style="@style/font_bill_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bill_status"
+                            android:textColor="@color/colorPrimary"/>
+
+                        <TextView
+                            style="@style/font_bill"
+                            android:id="@+id/bill_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:text="Local"
+                            android:textColor="@color/colorPrimary"/>
+
+                    </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+            <ListView
+                android:id="@+id/good_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/colorTransparent"
+                android:footerDividersEnabled="false"
+                android:headerDividersEnabled="false"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/trush_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/trash_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:background="@color/colorTransparent"
+            android:scaleType="center"
+            android:src="@drawable/ic_trash"
+            android:tint="@color/colorWhite"/>
+    </LinearLayout>
+
+    <include layout="@layout/widget_loading" />
+</RelativeLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@color/colorWhite">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingBottom="20dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/logo"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:scaleType="fitXY" />
+
+        <ScrollView
+            android:id="@+id/config_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="66dp">
+
+            <LinearLayout
+                android:id="@+id/email_login_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/input_box"
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        style="@style/font_subtitle_2"
+                        android:id="@+id/spos_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="#00000000"
+                        android:drawableStart="@drawable/ic_spos_address"
+                        android:drawableLeft="@drawable/ic_spos_address"
+                        android:drawablePadding="16dp"
+                        android:drawableTint="?android:textColorHint"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:minWidth="100dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:clickable="true"
+                        android:hint="@string/spos_address"
+                        android:inputType="text"
+                        android:textColorHint="@color/colorWhite1"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"/>
+                    <!--android:text="https://htest.juexingkeji.net/"-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="32dp"
+                    android:background="@drawable/input_box"
+                    android:orientation="vertical">
+
+                    <EditText
+                        style="@style/font_subtitle_2"
+                        android:id="@+id/merchant_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="#00000000"
+                        android:drawableStart="@drawable/ic_merchant_number"
+                        android:drawableLeft="@drawable/ic_merchant_number"
+                        android:drawablePadding="16dp"
+                        android:drawableTint="?android:textColorHint"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        android:minWidth="100dip"
+                        android:hint="@string/merchant_number"
+                        android:textColorHint="@color/colorWhite1"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp" />
+                    <!--android:text="JW000"-->
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        style="@style/font_button"
+                        android:id="@+id/continue_button"
+                        android:layout_width="128dp"
+                        android:layout_height="48dp"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/continue_label"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/colorWhite" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <include layout="@layout/widget_loading" />
+<!--</ScrollView>-->
+</RelativeLayout>
+

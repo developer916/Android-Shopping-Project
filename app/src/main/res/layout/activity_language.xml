@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingLeft="56dp"
+        android:paddingRight="56dp"
+        android:paddingBottom="20dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/logo"
+            android:layout_marginBottom="46dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            style="@style/font_subtitle_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/select_your_language"
+            android:textColor="@color/colorBlack1"
+            android:layout_marginBottom="50dp"/>
+
+        <RadioGroup
+            android:id="@+id/language_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                style="@style/font_subtitle_1_bold"
+                android:id="@+id/english"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/language_tab_button"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="@string/english"
+                android:textColor="@color/colorBlack1" />
+
+            <RadioButton
+                style="@style/font_subtitle_1_bold"
+                android:id="@+id/chinese"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/language_tab_button"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="@string/chinese"
+                android:textColor="@color/colorBlack1" />
+
+            <RadioButton
+                style="@style/font_subtitle_1_bold"
+                android:id="@+id/khmer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/language_tab_button"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="@string/khmer"
+                android:textColor="@color/colorBlack1" />
+
+        </RadioGroup>
+    </LinearLayout>
+</ScrollView>

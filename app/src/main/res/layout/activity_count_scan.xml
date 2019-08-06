@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTransparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/colorWhite"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <TextView
+                android:id="@+id/app_bar_title"
+                style="@style/font_subtitle_1"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/scan_app_title"
+                android:textColor="@color/colorPrimary" />
+
+
+            <ImageButton
+                android:id="@+id/upload_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:adjustViewBounds="true"
+                android:background="@color/colorTransparent"
+                android:scaleType="center"
+                android:src="@drawable/ic_finish"
+                android:tint="@color/colorPrimary"/>
+
+        </android.support.v7.widget.Toolbar>
+
+        <me.dm7.barcodescanner.zxing.ZXingScannerView
+            android:id="@+id/qrCodeScanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"/>
+    </LinearLayout>
+</RelativeLayout>
